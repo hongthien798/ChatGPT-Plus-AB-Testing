@@ -72,15 +72,15 @@ head(new2)
 
 #write.csv(new2, "new2.csv", row.names = FALSE)
 
-#H1
+#Hypothesis 1
 t.test(upgrade_willines ~ type, data = new2)
 
-#H2
+#Hypothesis 2
 summary(aov(upgrade_willines ~ type*edu_lv, data = new2))
 t.test(upgrade_willines ~ type, data = new2[new2$edu_lv=="Secondary or lower",])
 t.test(upgrade_willines ~ type, data = new2[new2$edu_lv=="Post Secondary",])
 
-#H3
+#Hypothesis 3
 summary(aov(upgrade_willines ~ type*purpose, data = new2))
 
 
